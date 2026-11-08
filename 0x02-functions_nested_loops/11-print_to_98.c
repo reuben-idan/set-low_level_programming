@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+ * print_number - Prints an integer value.
+ * @n: The integer to print.
+ */
 static void print_number(int n)
 {
 	if (n < 0)
