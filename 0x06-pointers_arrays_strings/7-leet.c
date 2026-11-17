@@ -9,19 +9,20 @@
 char *leet(char *str)
 {
 	char *p = str;
+	char *letters = "aAeEoOtTlL";
+	char *digits = "4433007711";
+	int i;
 
 	while (*p != '\0')
 	{
-		if (*p == 'a' || *p == 'A')
-			*p = '4';
-		else if (*p == 'e' || *p == 'E')
-			*p = '3';
-		else if (*p == 'o' || *p == 'O')
-			*p = '0';
-		else if (*p == 't' || *p == 'T')
-			*p = '7';
-		else if (*p == 'l' || *p == 'L')
-			*p = '1';
+		for (i = 0; letters[i] != '\0'; i++)
+		{
+			if (*p == letters[i])
+			{
+				*p = digits[i];
+				break;
+			}
+		}
 		p++;
 	}
 	return (str);
